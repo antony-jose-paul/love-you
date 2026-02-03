@@ -17,11 +17,11 @@ function ResetImage() {
 var body = document.body;
 
 function bg2() {
-	body.className = 'noo';
+    body.className = 'noo';
 };
 
-function resetBG(){
-	body.className = '';
+function resetBG() {
+    body.className = '';
 };
 
 //Moving button
@@ -29,45 +29,45 @@ const buttonHeight = 50;
 const buttonWidth = 150;
 
 //Making bg
-function lines(){
+function lines() {
     let sizeW = Math.random() * 12;
     let duration = Math.random() * 3;
-    let e = document. createElement('div');
+    let e = document.createElement('div');
     e.setAttribute('class', 'circle');
     document.body.appendChild(e);
-    e.style.width = 2*sizeW + 'px';
+    e.style.width = 2 * sizeW + 'px';
     e.style.left = Math.random() * + innerWidth + 'px';
     e.style.animationDuration = 2 + duration + 's';
-    setTimeout(function(){
+    setTimeout(function () {
         document.body.removeChild(e)
     }, 4000);
 }
 
-setInterval(function(){
+setInterval(function () {
     lines();
 }, 200);
 
-const maxWidth = 650;
-const maxHeight = 600;
+function moveButton() {
+    const button = document.getElementById('yes');
+    // Set position to fixed so it can jump anywhere on the screen
+    button.style.position = 'fixed';
 
-window.addEventListener('DOMContentLoaded', () =>{
-    const button = document.getElementById('yes')
+    const x = Math.random() * (window.innerWidth - button.offsetWidth);
+    const y = Math.random() * (window.innerHeight - button.offsetHeight);
 
-    button.addEventListener('mouseover', () => {
-        button.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px';
-        button.style.bottom = Math.floor(Math.random() * (maxHeight + 1)) + 'px';
-    });
-});
+    button.style.left = x + 'px';
+    button.style.top = y + 'px';
+}
 
 //BG image change while hovering on a button
 var body = document.body;
 
 function bg() {
-	body.className = 'noo';
+    body.className = 'noo';
 };
 
-function resetBG(){
-	body.className = '';
+function resetBG() {
+    body.className = '';
 };
 
 //Linking to no page

@@ -1,5 +1,5 @@
 body {
-	/* background: #111; */
+    /* background: #111; */
     /* background-image: linear-gradient(to right bottom, #ff009e, #ff819f, #fea0ff,
      #ffb2d7, #cbb2ff); */
     /* background-image: linear-gradient(0.25turn,  #b30f15, #96090f, #f0a1a0, #850606,
@@ -7,102 +7,104 @@ body {
     /* background-image: linear-gradient(0.25turn, #390035, #741838, #681740, #421034,
     #23020a); */
     background: #111;
-	height: 100vh;
+    height: 100vh;
     overflow: hidden;
 }
 
 .wrapper span {
-	position: fixed;
-	bottom: -180px;
-	height: 50px;
-	width: 50px;
-	z-index: -1;
+    position: fixed;
+    bottom: -180px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
     border-radius: 33%;
-	box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
-	animation: animate 7s linear infinite;
+    box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+    animation: animate 7s linear infinite;
 }
 
 .wrapper span:nth-child(1) {
     box-shadow: 0 0 50px #7938ce, 0 0 100px #500d90, 0 0 150px #b320e8, 0 0 200px #6838ce;
-	left: 60px;
-	animation-delay: 0.6s;
+    left: 60px;
+    animation-delay: 0.6s;
 }
 
 .wrapper span:nth-child(2) {
-	left: 10%;
-	animation-delay: 3s;
-	width: 60px;
-	height: 60px;
+    left: 10%;
+    animation-delay: 3s;
+    width: 60px;
+    height: 60px;
 }
 
 .wrapper span:nth-child(3) {
     box-shadow: 0 0 50px #e21212, 0 0 100px #9ae657, 0 0 150px #57e4e6, 0 0 200px #e657da;
-	left: 20%;
-	animation-delay: 2s;
+    left: 20%;
+    animation-delay: 2s;
 }
 
 .wrapper span:nth-child(4) {
     box-shadow: 0 0 50px #e21212, 0 0 100px #e63544, 0 0 150px #e6576a, 0 0 200px #ed748a;
-	left: 30%;
-	animation-delay: 5s;
-	width: 80px;
-	height: 80px;
+    left: 30%;
+    animation-delay: 5s;
+    width: 80px;
+    height: 80px;
 }
 
 .wrapper span:nth-child(5) {
     box-shadow: 0 0 50px #ec3b3b, 0 0 100px #e6b657, 0 0 150px #e657da, 0 0 200px #e657da;
-	left: 40%;
-	animation-delay: 1s;
+    left: 40%;
+    animation-delay: 1s;
 }
 
 .wrapper span:nth-child(6) {
-	left: 50%;
-	animation-delay: 7s;
+    left: 50%;
+    animation-delay: 7s;
 }
 
 .wrapper span:nth-child(7) {
     box-shadow: 0 0 50px #e21212, 0 0 100px #e657da, 0 0 150px #e657da, 0 0 200px #e657da;
-	left: 60%;
-	animation-delay: 6s;
-	width: 100px;
-	height: 100px;
+    left: 60%;
+    animation-delay: 6s;
+    width: 100px;
+    height: 100px;
 }
 
 .wrapper span:nth-child(8) {
     box-shadow: 0 0 50px #113cc8, 0 0 100px #7f57e6, 0 0 150px #2958d9, 0 0 200px #34569f;
-	left: 70%;
-	animation-delay: 8s;
+    left: 70%;
+    animation-delay: 8s;
 }
 
 .wrapper span:nth-child(9) {
-    
-	left: 80%;
-	animation-delay: 6s;
-	width: 90px;
-	height: 90px;
+
+    left: 80%;
+    animation-delay: 6s;
+    width: 90px;
+    height: 90px;
 }
 
 .wrapper span:nth-child(10) {
     box-shadow: 0 0 50px #e657da, 0 0 100px #e657da, 0 0 150px #e657da, 0 0 200px #e657da;
-	left: 90%;
-	animation-delay: 4s;
+    left: 90%;
+    animation-delay: 4s;
 }
 
 @keyframes animate {
-	0% {
-		transform: translateY(0);
-		opacity: 1;
-	}
-	80% {
-		opacity: .7;
-	}
-	100% {
-		transform: translateY(-800px) rotate(360deg);
-		opacity: 0;
-	}
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: .7;
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
 }
 
-h1{  
+h1 {
     margin: 5rem 0 0;
     padding-bottom: 0;
     display: flex;
@@ -111,7 +113,7 @@ h1{
     color: whitesmoke;
 }
 
-.red{
+.red {
     color: rgb(237, 37, 37);
     font-size: 3rem;
 }
@@ -122,8 +124,8 @@ h1{
 	align-items: center;
 } */
 
-img{
-    margin-top:0;
+img {
+    margin-top: 0;
     /* width: 400px; */
     height: 500px;
     position: absolute;
@@ -135,15 +137,14 @@ img{
 .buttons {
     display: flex;
     justify-content: center;
-    margin-top: 29rem;
-    padding-top: 2rem;
+    position: relative;
+    z-index: 10;
+    margin-top: 25rem;
     gap: 12rem;
 }
 
-.btn{
+.btn {
     display: inline-block;
-    position: relative;
-    top: calc(100% - 10rem);
     min-width: 120px;
     margin: 4px 2px;
     font-size: 1.25rem;
@@ -158,11 +159,11 @@ img{
 }
 
 #yes:hover span {
-    display:none
+    display: none
 }
-  
-#yes:hover:before {   
-    content:"I know 💖";
+
+#yes:hover:before {
+    content: "I know 💖";
 }
 
 body.yess {
@@ -170,11 +171,11 @@ body.yess {
 }
 
 #no:hover span {
-    display:none
+    display: none
 }
 
 #no:hover:before {
-    content:"Please 🥺";
+    content: "Please 🥺";
 }
 
 body.noo {
@@ -189,7 +190,7 @@ body.noo {
     left: 47%;
 }
 
-a{
+a {
     text-decoration: none;
     color: rgb(243, 214, 214);
 }
