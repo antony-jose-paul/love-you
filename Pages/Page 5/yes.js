@@ -28,34 +28,28 @@ function animateHearts() {
 animateHearts();
 
 // --- DATABASE INTEGRATION ---
-// 1. Go to Firebase Console -> Project Settings -> Add Web App
-// 2. Copy your config object and replace the one below
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBf3ijy9U4ZIIyGWvMrwI0ZO0w7U2HC3gM",
+  authDomain: "proposal-cbd7b.firebaseapp.com",
+  databaseURL: "https://proposal-cbd7b-default-rtdb.firebaseio.com",
+  projectId: "proposal-cbd7b",
+  storageBucket: "proposal-cbd7b.appspot.com",
+  messagingSenderId: "339849348382",
+  appId: "1:339849348382:web:a45edee31fc17069f2f50f"
 };
 
 // Initialize Firebase
-if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
-  firebase.initializeApp(firebaseConfig);
-  const database = firebase.database();
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
-  // Send "YES" to database
-  database.ref('responses/').push({
-    status: "She said YES!",
-    page: "yes.html",
-    timestamp: new Date().toString(),
-    userAgent: navigator.userAgent
-  }).then(() => {
-    console.log("Response saved to database! ❤️");
-  }).catch((error) => {
-    console.error("Database error: ", error);
-  });
-} else {
-  console.warn("Firebase not configured. Please add your config in yes.js");
-}
+// Send "YES" to database
+database.ref('responses/').push({
+  status: "She said YES!",
+  page: "yes.html",
+  timestamp: new Date().toString(),
+  userAgent: navigator.userAgent
+}).then(() => {
+  console.log("❤️");
+}).catch((error) => {
+  console.error("Database error: ", error);
+});
